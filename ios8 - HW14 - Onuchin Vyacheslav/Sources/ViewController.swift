@@ -9,11 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - UI Elements
+
+    // MARK: - Lyfecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupView()
+        setupHierarchy()
+        setupLayout()
     }
 
+    // MARK: - Setup
 
+    private func setupView() {
+
+    }
+
+    private func setupHierarchy() {
+
+    }
+
+    private func setupLayout() {
+
+    }
+
+    // MARK: - Actions
 }
 
