@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD575B75B65BF79AB7A0F0CD /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */; };
 		E4C0FC36298D5439002F3379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC35298D5439002F3379 /* AppDelegate.swift */; };
 		E4C0FC38298D5439002F3379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC37298D5439002F3379 /* SceneDelegate.swift */; };
 		E4C0FC3A298D5439002F3379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC39298D5439002F3379 /* ViewController.swift */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig"; path = "Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig"; sourceTree = "<group>"; };
+		32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios8___HW14___Onuchin_Vyacheslav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig"; path = "Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig"; sourceTree = "<group>"; };
 		E4C0FC32298D5439002F3379 /* ios8 - HW14 - Onuchin Vyacheslav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios8 - HW14 - Onuchin Vyacheslav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C0FC35298D5439002F3379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4C0FC37298D5439002F3379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD575B75B65BF79AB7A0F0CD /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11ADBD83220372EC0027CBD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37A1FBEB76DB4B309135B6AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */,
+				41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E4C0FC29298D5439002F3379 = {
 			isa = PBXGroup;
 			children = (
 				E4C0FC34298D5439002F3379 /* ios8 - HW14 - Onuchin Vyacheslav */,
 				E4C0FC33298D5439002F3379 /* Products */,
+				37A1FBEB76DB4B309135B6AC /* Pods */,
+				11ADBD83220372EC0027CBD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4C0FC46298D543D002F3379 /* Build configuration list for PBXNativeTarget "ios8 - HW14 - Onuchin Vyacheslav" */;
 			buildPhases = (
+				9705ADCE80B0AE8B750D191A /* [CP] Check Pods Manifest.lock */,
 				E4C0FC2E298D5439002F3379 /* Sources */,
 				E4C0FC2F298D5439002F3379 /* Frameworks */,
 				E4C0FC30298D5439002F3379 /* Resources */,
+				0CF3C54EE0127542E2BDC145 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CF3C54EE0127542E2BDC145 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9705ADCE80B0AE8B750D191A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios8 - HW14 - Onuchin Vyacheslav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4C0FC2E298D5439002F3379 /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		E4C0FC47298D543D002F3379 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,6 +390,7 @@
 		};
 		E4C0FC48298D543D002F3379 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

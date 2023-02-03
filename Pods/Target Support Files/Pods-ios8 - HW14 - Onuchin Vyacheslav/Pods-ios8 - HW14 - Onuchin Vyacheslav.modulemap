@@ -1,0 +1,6 @@
+framework module Pods_ios8___HW14___Onuchin_Vyacheslav {
+  umbrella header "Pods-ios8 - HW14 - Onuchin Vyacheslav-umbrella.h"
+
+  export *
+  module * { export * }
+}
