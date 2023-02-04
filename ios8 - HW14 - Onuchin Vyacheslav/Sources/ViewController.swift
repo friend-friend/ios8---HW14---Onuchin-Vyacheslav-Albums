@@ -6,10 +6,20 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
     // MARK: - UI Elements
+
+    private lazy var collectionsView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "item")
+        return collectionView
+    }()
 
     // MARK: - Lyfecycle
 
@@ -23,17 +33,54 @@ class ViewController: UIViewController {
     // MARK: - Setup
 
     private func setupView() {
-
+        view.backgroundColor = .cyan
     }
 
     private func setupHierarchy() {
-
+        view.addSubview(collectionsView)
     }
 
     private func setupLayout() {
-
+        collectionsView.snp.makeConstraints { make in
+            make.right.left.top.bottom.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 
+    // MARK: - CollectionViewLayout
+
+//    private func createLayout() -> UICollectionViewCompositionalLayout {
+//        return UICollectionViewCompositionalLayout { (section, _) NSCollectionLayoutSection in
+//            switch section {
+//            case 0:
+//            case 1:
+//            case 2:
+//            default:
+//            }
+//        }
+//    }
+}
+
     // MARK: - Actions
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath)
+        return cell
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        3
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
 

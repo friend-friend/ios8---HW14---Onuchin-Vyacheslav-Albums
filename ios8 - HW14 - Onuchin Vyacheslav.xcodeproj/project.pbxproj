@@ -13,11 +13,12 @@
 		E4C0FC3A298D5439002F3379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC39298D5439002F3379 /* ViewController.swift */; };
 		E4C0FC3F298D543D002F3379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC3E298D543D002F3379 /* Assets.xcassets */; };
 		E4C0FC42298D543D002F3379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC40298D543D002F3379 /* LaunchScreen.storyboard */; };
+		E4C2536B298E4CB7006F5E0D /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig"; path = "Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig"; sourceTree = "<group>"; };
-		32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios8___HW14___Onuchin_Vyacheslav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ios8___HW14___Onuchin_Vyacheslav.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig"; path = "Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig"; sourceTree = "<group>"; };
 		E4C0FC32298D5439002F3379 /* ios8 - HW14 - Onuchin Vyacheslav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios8 - HW14 - Onuchin Vyacheslav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C0FC35298D5439002F3379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		E4C0FC3E298D543D002F3379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4C0FC41298D543D002F3379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4C0FC43298D543D002F3379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */,
 				41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,6 +91,7 @@
 			children = (
 				E4C0FC4B298D55EB002F3379 /* App */,
 				E4C0FC39298D5439002F3379 /* ViewController.swift */,
+				E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -230,6 +232,7 @@
 				E4C0FC3A298D5439002F3379 /* ViewController.swift in Sources */,
 				E4C0FC36298D5439002F3379 /* AppDelegate.swift in Sources */,
 				E4C0FC38298D5439002F3379 /* SceneDelegate.swift in Sources */,
+				E4C2536B298E4CB7006F5E0D /* AlbumModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
