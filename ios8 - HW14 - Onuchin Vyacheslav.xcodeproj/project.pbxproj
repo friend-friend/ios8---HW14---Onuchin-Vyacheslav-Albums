@@ -14,6 +14,8 @@
 		E4C0FC3F298D543D002F3379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC3E298D543D002F3379 /* Assets.xcassets */; };
 		E4C0FC42298D543D002F3379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC40298D543D002F3379 /* LaunchScreen.storyboard */; };
 		E4C2536B298E4CB7006F5E0D /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */; };
+		E4C2536E298E62D0006F5E0D /* HorizontalScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536D298E62D0006F5E0D /* HorizontalScrollCell.swift */; };
+		E4C25370298E62E2006F5E0D /* VerticalScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536F298E62E2006F5E0D /* VerticalScrollCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E4C0FC41298D543D002F3379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4C0FC43298D543D002F3379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		E4C2536D298E62D0006F5E0D /* HorizontalScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollCell.swift; sourceTree = "<group>"; };
+		E4C2536F298E62E2006F5E0D /* VerticalScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		E4C0FC49298D554F002F3379 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E4C2536C298E6276006F5E0D /* Cell */,
 				E4C0FC4B298D55EB002F3379 /* App */,
 				E4C0FC39298D5439002F3379 /* ViewController.swift */,
 				E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */,
@@ -113,6 +118,15 @@
 				E4C0FC37298D5439002F3379 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E4C2536C298E6276006F5E0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2536D298E62D0006F5E0D /* HorizontalScrollCell.swift */,
+				E4C2536F298E62E2006F5E0D /* VerticalScrollCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C0FC3A298D5439002F3379 /* ViewController.swift in Sources */,
+				E4C2536E298E62D0006F5E0D /* HorizontalScrollCell.swift in Sources */,
+				E4C25370298E62E2006F5E0D /* VerticalScrollCell.swift in Sources */,
 				E4C0FC36298D5439002F3379 /* AppDelegate.swift in Sources */,
 				E4C0FC38298D5439002F3379 /* SceneDelegate.swift in Sources */,
 				E4C2536B298E4CB7006F5E0D /* AlbumModel.swift in Sources */,
