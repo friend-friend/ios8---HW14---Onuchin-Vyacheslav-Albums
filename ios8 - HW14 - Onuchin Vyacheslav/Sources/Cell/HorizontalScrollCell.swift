@@ -70,7 +70,7 @@ class HorizontalScrollCell: UICollectionViewCell {
             make.left.top.right.bottom.equalTo(contentView)
         }
 
-        stack.setCustomSpacing(10, after: namePhotoLabel)
+        stack.setCustomSpacing(10, after: photoImageView)
     }
 }
 
