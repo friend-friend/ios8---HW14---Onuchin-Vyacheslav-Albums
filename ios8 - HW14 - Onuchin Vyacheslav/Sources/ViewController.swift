@@ -8,16 +8,22 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+protocol ViewControllerProtocol: AnyObject {
+
+}
+
+class ViewController: UIViewController, ViewControllerProtocol {
+
+    var presenter: Presenter?
 
     // MARK: - UI Elements
 
     private lazy var collectionsView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "item")
+        collectionView.register(HorizontalScrollCell.self, forCellWithReuseIdentifier: HorizontalScrollCell.identifire)
+//        collectionView.register(VerticalScrollCell.self, forCellWithReuseIdentifier: VerticalScrollCell.identifire)
         return collectionView
     }()
 
@@ -49,32 +55,52 @@ class ViewController: UIViewController {
 
     // MARK: - CollectionViewLayout
 
-//    private func createLayout() -> UICollectionViewCompositionalLayout {
-//        return UICollectionViewCompositionalLayout { (section, _) NSCollectionLayoutSection in
-//            switch section {
-//            case 0:
-//            case 1:
-//            case 2:
-//            default:
-//            }
-//        }
-//    }
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout { section, _ in
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                  heightDimension: .fractionalWidth(1))
+            let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                                                   heightDimension: .fractionalWidth(0.5))
+            let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [layoutItem])
+            let sectionLayout = NSCollectionLayoutSection(group: layoutGroup)
+            return sectionLayout
+        }
+    }
 }
 
     // MARK: - Actions
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AlbumModel.modelArray[section].count
+        return presenter?.albumModel[section].count ?? 2
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath)
-        return cell
+        switch indexPath.section {
+        case 0, 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HorizontalScrollCell.identifire, for: indexPath) as? HorizontalScrollCell
+            cell?.model = presenter?.albumModel[indexPath.section][indexPath.item]
+            return cell ?? HorizontalScrollCell()
+        case 2, 3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalScrollCell.identifire, for: indexPath) as? VerticalScrollCell
+            cell?.model = presenter?.albumModel[indexPath.section][indexPath.item]
+            return cell ?? VerticalScrollCell()
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HorizontalScrollCell.identifire, for: indexPath) as? HorizontalScrollCell
+            cell?.model = presenter?.albumModel[indexPath.section][indexPath.item]
+            return cell ?? HorizontalScrollCell()
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        switch indexPath.section
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return AlbumModel.modelArray.count
+        return presenter?.albumModel.count ?? 4
     }
 }
 

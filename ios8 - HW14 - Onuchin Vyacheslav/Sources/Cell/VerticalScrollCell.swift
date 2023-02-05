@@ -11,6 +11,14 @@ class VerticalScrollCell: UICollectionViewCell {
 
     static let identifire = "VerticalScrollCell"
 
+    var model: AlbumModel? {
+        didSet {
+            iconView.image = UIImage(named: model?.image ?? "")
+            nameLabel.text = model?.title
+            numberLabel.text = "\((model?.number) ?? 0)"
+        }
+    }
+
     // MARK: - Outlets
 
     lazy var iconView: UIImageView = {
@@ -80,5 +88,11 @@ class VerticalScrollCell: UICollectionViewCell {
         stack.snp.makeConstraints { make in
             make.left.right.top.bottom.equalTo(contentView)
         }
+    }
+
+    // MARK: - Configuration
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
 }
