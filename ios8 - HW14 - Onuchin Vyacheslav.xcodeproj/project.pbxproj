@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD575B75B65BF79AB7A0F0CD /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */; };
 		E4C0FC36298D5439002F3379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC35298D5439002F3379 /* AppDelegate.swift */; };
 		E4C0FC38298D5439002F3379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC37298D5439002F3379 /* SceneDelegate.swift */; };
 		E4C0FC3A298D5439002F3379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0FC39298D5439002F3379 /* ViewController.swift */; };
-		E4C0FC3D298D5439002F3379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC3B298D5439002F3379 /* Main.storyboard */; };
 		E4C0FC3F298D543D002F3379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC3E298D543D002F3379 /* Assets.xcassets */; };
 		E4C0FC42298D543D002F3379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0FC40298D543D002F3379 /* LaunchScreen.storyboard */; };
+		E4C2536B298E4CB7006F5E0D /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */; };
+		E4C2536E298E62D0006F5E0D /* HorizontalScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536D298E62D0006F5E0D /* HorizontalScrollCell.swift */; };
+		E4C25370298E62E2006F5E0D /* VerticalScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2536F298E62E2006F5E0D /* VerticalScrollCell.swift */; };
+		E4C25372298F831D006F5E0D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C25371298F831D006F5E0D /* HeaderView.swift */; };
+		E4C25374298FCB4B006F5E0D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C25373298FCB4B006F5E0D /* Presenter.swift */; };
+		E4C25376298FCF59006F5E0D /* Assambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C25375298FCF58006F5E0D /* Assambly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig"; path = "Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig"; sourceTree = "<group>"; };
+		32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ios8___HW14___Onuchin_Vyacheslav.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig"; path = "Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig"; sourceTree = "<group>"; };
 		E4C0FC32298D5439002F3379 /* ios8 - HW14 - Onuchin Vyacheslav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios8 - HW14 - Onuchin Vyacheslav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C0FC35298D5439002F3379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4C0FC37298D5439002F3379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E4C0FC39298D5439002F3379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4C0FC3C298D5439002F3379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4C0FC3E298D543D002F3379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4C0FC41298D543D002F3379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4C0FC43298D543D002F3379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		E4C2536D298E62D0006F5E0D /* HorizontalScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollCell.swift; sourceTree = "<group>"; };
+		E4C2536F298E62E2006F5E0D /* VerticalScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollCell.swift; sourceTree = "<group>"; };
+		E4C25371298F831D006F5E0D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E4C25373298FCB4B006F5E0D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		E4C25375298FCF58006F5E0D /* Assambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assambly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD575B75B65BF79AB7A0F0CD /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11ADBD83220372EC0027CBD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32CF8CD04053A0F28101C380 /* Pods_ios8___HW14___Onuchin_Vyacheslav.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37A1FBEB76DB4B309135B6AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */,
+				41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E4C0FC29298D5439002F3379 = {
 			isa = PBXGroup;
 			children = (
 				E4C0FC34298D5439002F3379 /* ios8 - HW14 - Onuchin Vyacheslav */,
 				E4C0FC33298D5439002F3379 /* Products */,
+				37A1FBEB76DB4B309135B6AC /* Pods */,
+				11ADBD83220372EC0027CBD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +90,60 @@
 		E4C0FC34298D5439002F3379 /* ios8 - HW14 - Onuchin Vyacheslav */ = {
 			isa = PBXGroup;
 			children = (
-				E4C0FC35298D5439002F3379 /* AppDelegate.swift */,
-				E4C0FC37298D5439002F3379 /* SceneDelegate.swift */,
+				E4C0FC4A298D5579002F3379 /* Resources */,
+				E4C0FC49298D554F002F3379 /* Sources */,
+			);
+			path = "ios8 - HW14 - Onuchin Vyacheslav";
+			sourceTree = "<group>";
+		};
+		E4C0FC49298D554F002F3379 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2536C298E6276006F5E0D /* Cell */,
+				E4C0FC4B298D55EB002F3379 /* App */,
 				E4C0FC39298D5439002F3379 /* ViewController.swift */,
-				E4C0FC3B298D5439002F3379 /* Main.storyboard */,
+				E4C2536A298E4CB7006F5E0D /* AlbumModel.swift */,
+				E4C25373298FCB4B006F5E0D /* Presenter.swift */,
+				E4C25375298FCF58006F5E0D /* Assambly.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E4C0FC4A298D5579002F3379 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				E4C0FC3E298D543D002F3379 /* Assets.xcassets */,
 				E4C0FC40298D543D002F3379 /* LaunchScreen.storyboard */,
 				E4C0FC43298D543D002F3379 /* Info.plist */,
 			);
-			path = "ios8 - HW14 - Onuchin Vyacheslav";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E4C0FC4B298D55EB002F3379 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E4C0FC35298D5439002F3379 /* AppDelegate.swift */,
+				E4C0FC37298D5439002F3379 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E4C2536C298E6276006F5E0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E4C25377298FD17C006F5E0D /* Header */,
+				E4C2536D298E62D0006F5E0D /* HorizontalScrollCell.swift */,
+				E4C2536F298E62E2006F5E0D /* VerticalScrollCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E4C25377298FD17C006F5E0D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				E4C25371298F831D006F5E0D /* HeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4C0FC46298D543D002F3379 /* Build configuration list for PBXNativeTarget "ios8 - HW14 - Onuchin Vyacheslav" */;
 			buildPhases = (
+				9705ADCE80B0AE8B750D191A /* [CP] Check Pods Manifest.lock */,
 				E4C0FC2E298D5439002F3379 /* Sources */,
 				E4C0FC2F298D5439002F3379 /* Frameworks */,
 				E4C0FC30298D5439002F3379 /* Resources */,
+				0CF3C54EE0127542E2BDC145 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +208,73 @@
 			files = (
 				E4C0FC42298D543D002F3379 /* LaunchScreen.storyboard in Resources */,
 				E4C0FC3F298D543D002F3379 /* Assets.xcassets in Resources */,
-				E4C0FC3D298D5439002F3379 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CF3C54EE0127542E2BDC145 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios8 - HW14 - Onuchin Vyacheslav/Pods-ios8 - HW14 - Onuchin Vyacheslav-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9705ADCE80B0AE8B750D191A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios8 - HW14 - Onuchin Vyacheslav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4C0FC2E298D5439002F3379 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C25372298F831D006F5E0D /* HeaderView.swift in Sources */,
 				E4C0FC3A298D5439002F3379 /* ViewController.swift in Sources */,
+				E4C25374298FCB4B006F5E0D /* Presenter.swift in Sources */,
+				E4C2536E298E62D0006F5E0D /* HorizontalScrollCell.swift in Sources */,
+				E4C25370298E62E2006F5E0D /* VerticalScrollCell.swift in Sources */,
 				E4C0FC36298D5439002F3379 /* AppDelegate.swift in Sources */,
 				E4C0FC38298D5439002F3379 /* SceneDelegate.swift in Sources */,
+				E4C25376298FCF59006F5E0D /* Assambly.swift in Sources */,
+				E4C2536B298E4CB7006F5E0D /* AlbumModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E4C0FC3B298D5439002F3379 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4C0FC3C298D5439002F3379 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4C0FC40298D543D002F3379 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,16 +402,16 @@
 		};
 		E4C0FC47298D543D002F3379 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EEB5D850748198B56F3188D /* Pods-ios8 - HW14 - Onuchin Vyacheslav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ios8 - HW14 - Onuchin Vyacheslav/Info.plist";
+				INFOPLIST_FILE = "ios8 - HW14 - Onuchin Vyacheslav/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,16 +429,16 @@
 		};
 		E4C0FC48298D543D002F3379 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41511E7834CB44AC2BFC6CF7 /* Pods-ios8 - HW14 - Onuchin Vyacheslav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ios8 - HW14 - Onuchin Vyacheslav/Info.plist";
+				INFOPLIST_FILE = "ios8 - HW14 - Onuchin Vyacheslav/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
