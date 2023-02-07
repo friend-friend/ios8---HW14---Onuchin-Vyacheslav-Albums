@@ -25,7 +25,7 @@ class HorizontalScrollCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.layer.masksToBounds = true
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 6
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -48,6 +48,9 @@ class HorizontalScrollCell: UICollectionViewCell {
     lazy var stack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
+        stack.alignment = .center
+        stack.distribution = .equalCentering
+        stack.backgroundColor = .white
         return stack
     }()
     
@@ -75,10 +78,25 @@ class HorizontalScrollCell: UICollectionViewCell {
     
     private func setupLayout() {
         stack.snp.makeConstraints { make in
-            make.left.top.right.bottom.equalTo(contentView)
+            make.right.left.bottom.equalToSuperview().inset(15)
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
         }
-        
-        stack.setCustomSpacing(10, after: photoImageView)
+
+        photoImageView.snp.makeConstraints { make in
+            make.top.right.left.equalToSuperview()
+            make.bottom.equalTo(contentView).offset(-25)
+        }
+
+        namePhotoLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.bottom.equalToSuperview().inset(10)
+        }
+
+        numberPhotoLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.top.equalTo(namePhotoLabel.snp.bottom)
+        }
     }
     
     // MARK: - Configuration

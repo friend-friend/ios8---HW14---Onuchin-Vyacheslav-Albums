@@ -39,21 +39,19 @@ class VerticalScrollCell: UICollectionViewCell {
 
     lazy var numberLabel: UILabel = {
         let numberLabel = UILabel()
-        numberLabel.font = .systemFont(ofSize: 17, weight: .regular)
+        numberLabel.font = .systemFont(ofSize: 15, weight: .regular)
         numberLabel.textAlignment = .left
         numberLabel.textColor = .gray
         return numberLabel
     }()
 
-    lazy var button: UIButton = {
-        let button = UIButton()
-        button.layer.masksToBounds = true
-        let image = UIImage(systemName: "chevron.right",
-                            withConfiguration:  UIImage.SymbolConfiguration(pointSize: 16, weight: .semibold))?
-                            .withTintColor(.systemGray4, renderingMode: .alwaysOriginal)
-        button.setImage(image, for: .normal)
-        return button
-    }()
+    private let imageIconRight: UIImageView = {
+           let image = UIImageView(image: UIImage(systemName: "chevron.right"))
+           image.contentMode = .scaleAspectFit
+           image.clipsToBounds = true
+           image.tintColor = .systemGray2
+           return image
+       }()
 
     lazy var stack: UIStackView = {
         let stack = UIStackView()
@@ -81,12 +79,35 @@ class VerticalScrollCell: UICollectionViewCell {
         stack.addArrangedSubview(iconView)
         stack.addArrangedSubview(nameLabel)
         stack.addArrangedSubview(numberLabel)
-        stack.addArrangedSubview(button)
+        stack.addArrangedSubview(imageIconRight)
     }
 
     private func setupLayout() {
         stack.snp.makeConstraints { make in
             make.left.right.top.bottom.equalTo(contentView)
+        }
+
+        iconView.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.width.height.equalTo(27)
+            make.centerY.equalToSuperview()
+        }
+
+        nameLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.equalTo(iconView.snp.right).offset(15)
+        }
+
+        numberLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.right.equalToSuperview().inset(40)
+            make.width.equalTo(150)
+        }
+
+        imageIconRight.snp.makeConstraints { make in
+            make.left.equalTo(nameLabel.snp.right).inset(-5)
+            make.width.height.equalTo(17)
+            make.centerY.equalToSuperview()
         }
     }
 

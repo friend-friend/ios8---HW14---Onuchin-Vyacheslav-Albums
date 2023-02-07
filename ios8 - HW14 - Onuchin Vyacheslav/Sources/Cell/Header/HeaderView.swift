@@ -51,7 +51,10 @@ class HeaderView: UICollectionReusableView {
             make.bottom.equalTo(self)
         }
         lineSeparators.snp.makeConstraints { make in
-            make.top.equalTo(label.snp.bottom)
+            make.height.equalTo(1)
+            make.top.equalTo(label.snp.bottom).inset(-10)
+            make.left.equalTo(label.snp.left)
+            make.right.equalToSuperview()
         }
     }
 }
