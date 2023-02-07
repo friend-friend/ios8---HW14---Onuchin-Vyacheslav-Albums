@@ -39,8 +39,8 @@ class VerticalScrollCell: UICollectionViewCell {
 
     lazy var numberLabel: UILabel = {
         let numberLabel = UILabel()
-        numberLabel.font = .systemFont(ofSize: 15, weight: .regular)
-        numberLabel.textAlignment = .left
+        numberLabel.font = .systemFont(ofSize: 17, weight: .regular)
+        numberLabel.textAlignment = .right
         numberLabel.textColor = .gray
         return numberLabel
     }()
@@ -100,13 +100,12 @@ class VerticalScrollCell: UICollectionViewCell {
 
         numberLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.right.equalToSuperview().inset(40)
-            make.width.equalTo(150)
+            make.right.equalTo(imageIconRight.snp.left).offset(-5)
         }
 
         imageIconRight.snp.makeConstraints { make in
-            make.left.equalTo(nameLabel.snp.right).inset(-5)
-            make.width.height.equalTo(17)
+            make.right.equalToSuperview()
+            make.width.height.equalTo(11)
             make.centerY.equalToSuperview()
         }
     }

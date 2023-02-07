@@ -41,6 +41,7 @@ class ViewController: UIViewController, ViewControllerProtocol {
 
     private func setupView() {
         self.title = "Альбомы"
+        view.backgroundColor = .systemBackground
     }
 
     private func setupHierarchy() {
@@ -49,7 +50,8 @@ class ViewController: UIViewController, ViewControllerProtocol {
 
     private func setupLayout() {
         collectionsView.snp.makeConstraints { make in
-            make.right.left.top.bottom.equalToSuperview()
+            make.left.top.bottom.equalToSuperview()
+            make.right.equalToSuperview().offset(-6)
             make.top.equalTo(view.safeAreaLayoutGuide)
         }
     }
