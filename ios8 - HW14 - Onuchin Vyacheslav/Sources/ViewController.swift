@@ -52,7 +52,6 @@ class ViewController: UIViewController, ViewControllerProtocol {
         collectionsView.snp.makeConstraints { make in
             make.left.top.bottom.equalToSuperview()
             make.right.equalToSuperview().offset(-6)
-            make.top.equalTo(view.safeAreaLayoutGuide)
         }
     }
 
@@ -72,14 +71,14 @@ class ViewController: UIViewController, ViewControllerProtocol {
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(
                     top: 12,
-                    leading: 6,
-                    bottom: 6,
-                    trailing: 6
+                    leading: 5,
+                    bottom: 5,
+                    trailing: 5
                 )
 
                 let groupSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(0.5),
-                    heightDimension: .estimated(410)
+                    heightDimension: .absolute(480)
                 )
 
                 let layoutGroup = NSCollectionLayoutGroup.vertical(
@@ -88,15 +87,13 @@ class ViewController: UIViewController, ViewControllerProtocol {
                     count: 2
                 )
 
-                layoutGroup.interItemSpacing = .fixed(88)
-
                 let sectionLayout = NSCollectionLayoutSection(group: layoutGroup)
                 sectionLayout.interGroupSpacing = .zero
                 sectionLayout.orthogonalScrollingBehavior = .paging
                 sectionLayout.contentInsets = NSDirectionalEdgeInsets(
-                    top: .zero,
+                    top: 12,
                     leading: 12,
-                    bottom: 100,
+                    bottom: 0,
                     trailing: 12
                 )
 
@@ -109,7 +106,6 @@ class ViewController: UIViewController, ViewControllerProtocol {
                     layoutSize: headerSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
-                header.zIndex = Int.max
                 sectionLayout.boundarySupplementaryItems = [header]
 
                 return sectionLayout
@@ -122,15 +118,15 @@ class ViewController: UIViewController, ViewControllerProtocol {
 
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(
-                    top: .zero,
+                    top: 12,
                     leading: 6,
-                    bottom: .zero,
+                    bottom: 6,
                     trailing: 6
                 )
 
                 let groupSize = NSCollectionLayoutSize(
-                    widthDimension: .estimated(190),
-                    heightDimension: .absolute(185)
+                    widthDimension: .fractionalWidth(0.5),
+                    heightDimension: .fractionalWidth(0.7)
                 )
 
                 let layoutGroup = NSCollectionLayoutGroup.vertical(
@@ -143,10 +139,10 @@ class ViewController: UIViewController, ViewControllerProtocol {
                 sectionLayout.interGroupSpacing = .zero
                 sectionLayout.orthogonalScrollingBehavior = .paging
                 sectionLayout.contentInsets = NSDirectionalEdgeInsets(
-                    top: .zero,
-                    leading: 12,
-                    bottom: 60,
-                    trailing: 12
+                    top: 12,
+                    leading: 6,
+                    bottom: 0,
+                    trailing: 6
                 )
 
                 let headerSize = NSCollectionLayoutSize(
@@ -158,7 +154,6 @@ class ViewController: UIViewController, ViewControllerProtocol {
                     layoutSize: headerSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
-                header.zIndex = Int.max
                 sectionLayout.boundarySupplementaryItems = [header]
 
                 return sectionLayout

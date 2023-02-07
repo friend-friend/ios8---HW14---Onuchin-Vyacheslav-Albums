@@ -41,15 +41,15 @@ class HorizontalScrollCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17)
         label.textAlignment = .left
-        label.textColor = .gray
+        label.textColor = .lightGray
         return label
     }()
     
     lazy var stack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.alignment = .center
-        stack.distribution = .equalCentering
+        stack.alignment = .leading
+        stack.distribution = .fillEqually
         stack.backgroundColor = .white
         return stack
     }()
@@ -71,31 +71,21 @@ class HorizontalScrollCell: UICollectionViewCell {
     
     private func setupHierarchy() {
         contentView.addSubview(stack)
-        stack.addArrangedSubview(photoImageView)
+        contentView.addSubview(photoImageView)
         stack.addArrangedSubview(namePhotoLabel)
         stack.addArrangedSubview(numberPhotoLabel)
     }
     
     private func setupLayout() {
-        stack.snp.makeConstraints { make in
-            make.right.left.bottom.equalToSuperview().inset(15)
-            make.top.equalToSuperview()
-            make.left.equalToSuperview()
-        }
 
         photoImageView.snp.makeConstraints { make in
             make.top.right.left.equalToSuperview()
-            make.bottom.equalTo(contentView).offset(-25)
+            make.height.equalTo(180)
         }
 
-        namePhotoLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview()
-            make.bottom.equalToSuperview().inset(10)
-        }
-
-        numberPhotoLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview()
-            make.top.equalTo(namePhotoLabel.snp.bottom)
+        stack.snp.makeConstraints { make in
+            make.right.left.equalToSuperview()
+            make.top.equalTo(photoImageView.snp.bottom)
         }
     }
     

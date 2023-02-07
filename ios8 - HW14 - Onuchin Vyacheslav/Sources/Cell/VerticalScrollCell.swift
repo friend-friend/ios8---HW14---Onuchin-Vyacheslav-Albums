@@ -13,7 +13,7 @@ class VerticalScrollCell: UICollectionViewCell {
 
     var model: AlbumModel? {
         didSet {
-            iconView.image = UIImage(named: model?.image ?? "")
+            iconView.image = UIImage(systemName: model?.image ?? "")
             nameLabel.text = model?.title
             numberLabel.text = "\((model?.number) ?? 0)"
         }
@@ -53,12 +53,6 @@ class VerticalScrollCell: UICollectionViewCell {
            return image
        }()
 
-    lazy var stack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        return stack
-    }()
-
     // MARK: - Initialization
 
     override init(frame: CGRect) {
@@ -75,17 +69,13 @@ class VerticalScrollCell: UICollectionViewCell {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        contentView.addSubview(stack)
-        stack.addArrangedSubview(iconView)
-        stack.addArrangedSubview(nameLabel)
-        stack.addArrangedSubview(numberLabel)
-        stack.addArrangedSubview(imageIconRight)
+        addSubview(iconView)
+        addSubview(nameLabel)
+        addSubview(numberLabel)
+        addSubview(imageIconRight)
     }
 
     private func setupLayout() {
-        stack.snp.makeConstraints { make in
-            make.left.right.top.bottom.equalTo(contentView)
-        }
 
         iconView.snp.makeConstraints { make in
             make.left.equalToSuperview()
@@ -100,12 +90,12 @@ class VerticalScrollCell: UICollectionViewCell {
 
         numberLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.right.equalTo(imageIconRight.snp.left).offset(-5)
+            make.right.equalTo(imageIconRight.snp.left)
         }
 
         imageIconRight.snp.makeConstraints { make in
-            make.right.equalToSuperview()
-            make.width.height.equalTo(11)
+            make.right.equalToSuperview().offset(-5)
+            make.width.height.equalTo(18)
             make.centerY.equalToSuperview()
         }
     }
